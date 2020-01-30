@@ -36,12 +36,5 @@ public class TestBase {
         AppiumServerHelper.stopServer();
     }
 
-    @Test
-    public void check(){
-        driver.get("https://vivaro.am");
-        ((WebElement)driver.findElements(By.cssSelector("label.right-top-nav-new-h")).get(0)).click();
-        Assert.assertTrue(driver.findElement(By.cssSelector("input[name=email]")).isDisplayed());
-    }
-
 
 }
