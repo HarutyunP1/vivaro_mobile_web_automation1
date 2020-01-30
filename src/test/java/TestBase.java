@@ -1,6 +1,9 @@
 import factory.AppiumServerHelper;
 import factory.DriverFactory;
 import io.appium.java_client.AppiumDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
@@ -12,24 +15,32 @@ public class TestBase {
 
     AppiumDriver driver;
 
-    @BeforeTest
+    @BeforeSuite
     public void setUp() {
+
         AppiumServerHelper.startServer();
     }
 
-    @BeforeMethod
+    @BeforeClass
     public void setUpMethod() throws MalformedURLException {
         driver = DriverFactory.getDriver(System.getProperty("platform"));
     }
 
-    @AfterMethod
+    @AfterClass
     public void tearDownMethod() throws MalformedURLException {
         DriverFactory.quitDriver(DriverFactory.getDriver(System.getProperty("platform")));
     }
 
-    @AfterTest
+    @AfterSuite
     public void tearDownTest() {
         AppiumServerHelper.stopServer();
+    }
+
+    @Test
+    public void check(){
+        driver.get("https://vivaro.am");
+        ((WebElement)driver.findElements(By.cssSelector("label.right-top-nav-new-h")).get(0)).click();
+        Assert.assertTrue(driver.findElement(By.cssSelector("input[name=email]")).isDisplayed());
     }
 
 
