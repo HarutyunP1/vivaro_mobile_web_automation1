@@ -57,13 +57,13 @@ public class AndroidCommands {
     /**
      * Adb command KeyEvents
      */
-    public String shellKeyEvents(int key) {
+    public void shellKeyEvents(int key) {
         List<String> commandArgs = Arrays.asList("input keyevent " + key);
         Map<String, Object> command = ImmutableMap.of(
                 "command", "adb",
                 "args", commandArgs
         );
-        return ((String) driver.executeScript("mobile: shell", command));
+        driver.executeScript("mobile: shell", command);
 
     }
 
