@@ -4,7 +4,7 @@ Vivaro is the leading betting company in Armenia which offers a complete range o
 # Download and Install.
 
 * Java SE Development Kit(please use the latest version)
-[JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
+[JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html)
 * After installation set Environment Variable on [Windows](https://www.java.com/en/download/help/path.xml), [Mac](https://medium.com/@himanshuagarwal1395/setting-up-environment-variables-in-macos-sierra-f5978369b255)
 * Apache Maven (please use the latest version) [Maven](https://maven.apache.org/download.cgi)
 * Appium [Mac](http://appium.io/), [Windows](http://appium.io/docs/en/drivers/windows/)
