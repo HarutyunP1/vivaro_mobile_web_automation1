@@ -17,7 +17,6 @@ public class TestBase {
 
     @BeforeSuite
     public void setUp() {
-
         AppiumServerHelper.startServer();
     }
 
