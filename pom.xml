@@ -16,7 +16,7 @@
         <maven-failsafe-plugin.version>3.0.0-M4</maven-failsafe-plugin.version>
         <appium.url/>
         <mobile.platform>android</mobile.platform>
-        <mobile.udid>69b75c93</mobile.udid>
+        <mobile.udid>277bb8e0</mobile.udid>
         <!-- 00008020-00021DDE3CD8003A -->
     </properties>
     <build>

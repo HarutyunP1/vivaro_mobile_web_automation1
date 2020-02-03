@@ -24,6 +24,11 @@ public class TestBase {
     public void setUpMethod() throws MalformedURLException {
         driver = DriverFactory.getDriver(System.getProperty("platform"));
     }
+    @AfterMethod
+    public void deleteCookies(){
+        driver.manage().deleteAllCookies();
+        driver.navigate().refresh();
+    }
 
     @AfterClass
     public void tearDownMethod() throws MalformedURLException {
